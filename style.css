@@ -1,0 +1,315 @@
+body {
+        font-family:'Lato','Helvetica','Arial',sans-serif;
+
+}
+
+
+.full-fold {
+    height: 100vh;
+    max-height: 1200px;
+    min-height: 600px;
+}
+
+.pt-xx {
+    padding-top:0px;
+}
+
+.toolbar {
+    height:70px;
+    background-color:white;
+    padding:20px 0;
+    border-bottom:5px solid rgb(242,109,37);
+
+}
+
+.bottomcol {
+    position:fixed;
+    bottom:0;
+    background-color:#b66225;
+    transition: all 0.3s ease;
+    
+}
+
+h1 {
+    color:white;
+    font-family:inherit;
+}
+
+p {
+    color:white;
+    text-align: left;
+    font-family:inherit;
+    line-height:1.4;
+}
+
+
+
+.button {
+    padding-top:20px;
+    margin-top:35px;
+}
+
+.btn-filled {
+    margin-top:20px;
+    background-color:#F26D25;
+    border-radius:3px;
+    border: 1px solid #F26D25;
+}
+
+.btn:hover {
+    background-color:white;
+
+}
+
+
+
+
+.btn-filled {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px white; 
+  font-size: inherit;
+  font-weight: 700;
+  margin: 1em;
+  padding: 1em 2em;
+  text-align: center;
+  text-transform: capitalize;
+
+
+  position: relative;
+  vertical-align: middle;
+
+}
+
+ .btn-filled::before,
+  .btn-filled::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+
+.draw {
+    transition: color 0.25s;
+}
+  .draw::before,
+  .draw::after {
+    border: 2px solid transparent; 
+    width: 0;
+    height: 0;
+  }
+
+  .draw::before {
+    top: 0;
+    left: 0;
+  }
+
+  .draw::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .draw:hover {
+    color: rgb(69,151,203);
+  }
+
+  .draw:hover::before,
+  .draw:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  .draw:hover::before {
+    border-top-color: #b66225; 
+    border-right-color: #b66225;
+    transition:
+      width 0.25s ease-out, 
+      height 0.25s ease-out 0.25s; 
+  }
+
+  .draw:hover::after {
+    border-bottom-color: #b66225; 
+    border-left-color:#b66225;
+    transition:
+      border-color 0s ease-out 0.5s, 
+      width 0.25s ease-out 0.5s, 
+      height 0.25s ease-out 0.75s; 
+  }
+
+
+.meet:hover {
+    color: #ffe1cb;
+  }
+
+  .meet::after {
+    top: 0;
+    left: 0;
+  }
+
+  .meet:hover::before {
+    border-top-color: #94633f;
+    border-right-color: #94633f;
+  }
+
+ .meet:hover::after {
+    border-bottom-color: #94633f;
+    border-left-color: #94633f;
+    transition: 
+      height 0.25s ease-out,
+      width 0.25s ease-out 0.25s;
+  }
+
+
+
+
+#BarContents {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position:relative;
+}
+
+#logo {
+    background-image:url(http://www.enginegroup.co.uk/content/images/logo.png);
+    background-size:cover;
+    height:38px;
+    width:100px;
+    display:block;
+    float:left;
+}
+
+.banner-logo_text span {
+background-color: #b66225;
+    display: inline-block;
+    padding: 3px 5px 5px;
+    margin-bottom: 5px;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+}
+
+.banner-logo {
+    padding:0;
+    
+}
+
+.clientlogo {
+    margin-top: 55px;
+}
+
+.clientlogo img {
+    max-height:56px;
+    margin-top:45px;
+}
+
+.clientlogo:hover {
+    opacity:0.75;
+}
+
+#clients {
+    margin: 0 auto;
+    display:table;
+}
+
+#clients ul{
+    list-style:none;
+    margin-top:15px;
+    margin-bottom:0px;
+    
+}
+
+#clients li {
+    display:inline;
+    padding-left:25px;
+    padding-right:25px;
+}
+
+
+@media (max-width:767px) {
+    #BarContents {
+    max-width: 767px;
+}
+
+.bottomcol{
+    padding-bottom: 50px;
+    padding-top: 35px;
+    position:inherit;
+    margin-top:50%;
+    bottom:inherit;
+
+}
+
+.toolbar {
+    padding:20px 20px;
+}
+.banner-logo {
+    max-width:40%;
+    margin-top:25px;
+}
+}
+
+@media (min-width: 768px) {
+#BarContents {
+    width: 750px;
+}
+
+
+.bottomcol{
+    max-width: 714px;
+    padding-bottom: 50px;
+    padding-top: 35px;
+}
+
+.banner-logo {
+margin-top:25px;
+}
+
+.clientlogo img {
+    max-height:45px;
+}
+}
+
+@media (min-width: 992px) {
+#BarContents {
+    width: 970px;
+}
+
+.bottomcol {
+    max-width:970px;
+}
+
+.banner-logo {
+    margin-top:35px;
+    
+}
+
+}
+
+
+@media (min-width: 1200px) {
+#BarContents {
+    width: 1170px;
+}
+
+.toolbar {
+        margin-bottom:30px;
+}
+
+.bottomcol {
+max-width:1170px;
+padding-top:50px;
+padding-bottom:50px;
+}
+
+.banner-logo {
+    margin-top:0px;
+}
+
+
+} 
+
+
